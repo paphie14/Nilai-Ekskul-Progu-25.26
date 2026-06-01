@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NILAI KEGIATAN EKSTRAKURIKULER</title>
+<title>Nilai Ekskul & Program Unggulan</title>
 
 <style>
 
@@ -24,7 +23,7 @@ body{
 
 .container{
     width:100%;
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
 }
 
@@ -35,12 +34,12 @@ body{
     padding:20px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .header-box{
     max-width:850px;
     margin:0 auto 35px auto;
-    padding:0 20px 25px 20px;
+    padding:0 20px 25px;
     border-bottom:1px solid #30363d;
 }
 
@@ -49,8 +48,6 @@ body{
     text-align:center;
     font-size:30px;
     font-weight:bold;
-    margin:0 auto 8px auto;
-    max-width:800px;
     line-height:1.4;
 }
 
@@ -58,64 +55,32 @@ body{
     color:#f0f6fc;
     text-align:center;
     font-size:22px;
-    margin:0 auto;
-    max-width:700px;
-    line-height:1.5;
+    margin-top:10px;
 }
 
-/* ===== LAYOUT ===== */
+/* 3 KOLOM */
 
 .content-wrapper{
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
     gap:20px;
-    align-items:flex-start;
 }
 
-.sidebar{
-    width:320px;
-    flex-shrink:0;
+.column-box{
     background:#21262d;
     border:1px solid #30363d;
     border-radius:10px;
     padding:18px;
 }
 
-.sidebar h3{
-    margin-top:0;
-    margin-bottom:15px;
-    color:#ffcc00;
-    font-size:24px;
-}
-
-.sidebar ol{
-    padding-left:20px;
-    margin:0;
-}
-
-.sidebar li{
-    margin-bottom:12px;
-}
-
-.main-content{
-    flex:1;
-}
-
-/* ===== SECTION ===== */
-
 .section-title{
     color:#ffffff;
     border-bottom:1px solid #30363d;
-    padding-bottom:8px;
-    margin-top:35px;
+    padding-bottom:10px;
     margin-bottom:18px;
     font-size:22px;
+    font-weight:bold;
 }
-
-.section-title:first-child{
-    margin-top:0;
-}
-
-/* ===== LINK ===== */
 
 .menu-link{
     display:block;
@@ -123,7 +88,7 @@ body{
     padding:14px 16px;
     margin-bottom:10px;
 
-    background:#21262d;
+    background:#161b22;
     border:1px solid #30363d;
     border-radius:8px;
 
@@ -140,38 +105,25 @@ body{
     transform:translateX(3px);
 }
 
-/* ===== FOOTER ===== */
+.info-list{
+    padding-left:20px;
+}
+
+.info-list li{
+    margin-bottom:12px;
+}
 
 footer{
-    margin-top:40px;
+    margin-top:30px;
     text-align:center;
     color:#8b949e;
     font-size:14px;
 }
 
-/* ===== MOBILE ===== */
-
-@media (max-width:800px){
-
-    body{
-        padding:10px;
-    }
-
-    .repo-box{
-        padding:15px;
-    }
-
-    .header-box{
-        padding:0 10px 20px 10px;
-        margin-bottom:25px;
-    }
+@media (max-width:900px){
 
     .content-wrapper{
-        flex-direction:column;
-    }
-
-    .sidebar{
-        width:100%;
+        grid-template-columns:1fr;
     }
 
     .main-title{
@@ -180,15 +132,6 @@ footer{
 
     .sub-title{
         font-size:18px;
-    }
-
-    .section-title{
-        font-size:20px;
-    }
-
-    .menu-link{
-        font-size:16px;
-        padding:13px;
     }
 
 }
@@ -204,75 +147,57 @@ footer{
 
     <div class="header-box">
 
-        <div class="main-title">
-            NILAI EKSTRAKURIKULER, PROGRAM UNGGULAN, dan STUDENT OF THE MONTH
+        <div class="main-title" id="main-title">
+            Loading...
         </div>
 
-        <div class="sub-title">
-            SD ISLAM CIKAL HARAPAN 2<br>
-            SEMESTER 2 TA 2025/2026
+        <div class="sub-title" id="sub-title">
+            Loading...
         </div>
 
     </div>
 
     <div class="content-wrapper">
 
-        <div class="sidebar">
+        <!-- KIRI -->
 
-            <h3>⚠ PENTING!</h3>
+        <div class="column-box">
 
-            <ol>
-                <li>Isi sesuai dengan Jenis Ekskul dan Program Unggulan.</li>
-                <li>Sesuaikan daftar peserta pada absensi dan daftar nilai ini.</li>
-                <li>Hapus siswa yang sudah tidak mengikuti.</li>
-                <li>Tambahkan siswa yang belum ada dalam daftar nilai.</li>
-                <li>Jika tidak bisa mengisi, klik <b>Request Access</b> kemudian WA ke Waka Kesiswaan.</li>
-                <li>Selamat mengerjakan.</li>
-            </ol>
+            <div class="section-title">
+                ⚠ PENTING!
+            </div>
+
+            <ol class="info-list" id="info-container"></ol>
 
         </div>
 
-        <div class="main-content">
+        <!-- TENGAH -->
+
+        <div class="column-box">
 
             <div class="section-title">
-                A. PROGRAM UNGGULAN
+                EKSTRAKURIKULER
             </div>
 
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1RJn0wCMcXYxKiknosDrkB56Ui43nWBeFy2lRckQ4-AA/edit?usp=drive_link">1. Angklung</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/108YiuI5fI1QXU3LX6Im58wlyQDeU-itwJk8GOvxnkGU/edit?usp=drive_link">2. Dokter Kecil</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1AvGxe6nzXqL5Cwx9CHWwwLrQqSb33P6u-8Xhr8xJy_4/edit?usp=drive_link">3. Gamelan</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1EofMr0RA8KK5gpMHtVILstbv4Ba-ZECT1ye0QAVOEk0/edit?usp=drive_link">4. Marawis</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1gb7u0HjrE156AxWoSUXDFEA3IcV0T77CE7dtGh6yrrY/edit?usp=drive_link">5. Marching Band</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1y5oYGmhYSxH-bHZUQh-SInpo-mTaTzxdmBSTjnXOFW8/edit?usp=drive_link">6. Roots</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1fex1ebXoYWbBzenxKhZsvJoQ9XgEeH9zEsDWY4JjX9w/edit?usp=drive_link">7. Tahfidz Al Qur'an</a>
+            <div id="ekskul-container"></div>
+
+        </div>
+
+        <!-- KANAN -->
+
+        <div class="column-box">
 
             <div class="section-title">
-                B. EKSTRAKURIKULER
+                PROGRAM UNGGULAN
             </div>
 
-            <a class="menu-link" href="badminton.html">1. Badminton (tidak ada nilai/tidak dilaksanakan)</a>
+            <div id="progu-container"></div>
 
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1gY-bnyVM-mtSh1ApYsIn6QgnzbdMhMcP1vRiLMAIJ1U/edit?usp=drive_link">2. Basket</a>
-
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1gjHsepzbAimar3I6PFPcIjT67Zn1CQHQmSSniFYLbvs/edit?usp=drive_link">3. Coding & Robotic</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1nDS50bR0hTOTlgLk28sRBnEttfJl2l_CQ82DshW0HwU/edit?usp=drive_link">4. Comic & Art</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1A3YTPCJbD2TfE67_t1Y04CYtIFvcE21r5Pnsi6Xke0c/edit?usp=drive_link">5. Futsal</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1JkoqOj8RpeeE0DN3dXGOVvVxsni7FQOH59BD0kKYv24/edit?usp=drive_link">6. Karate</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1U7wESS3T0EQMeoF2JDzbAqpb9uOeAi2lLCVXBDe0SdI/edit?usp=drive_link">7. LIA</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1jU3mpR2di48J__uSWi6uKSXQJIYokpInFD7su4XFbmI/edit?usp=drive_link">8. Menari</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1XWT3D8RpqW9NbkIyKFZ-nTyJJILJoz2rMzYD6p8TXmk/edit?usp=drive_link">9. Menggambar</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1C89Coaie0b4as_PkYYQLP5hzS8sqXPRVZl8LVn6k9bI/edit?usp=drive_link">10. Renang</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1OC4zy53hpB_ucuzZU_W7kT2Sj5kfJ-AfSHABCqqhZi0/edit?usp=drive_link">11. Sains Kids</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1v5cJDJrTM4lEbO1Assq_IqMr1byIYTOFvpzAjyl83-o/edit?usp=drive_link">12. Taekwondo</a>
-            <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1TEV85yq-_fcyzKKUhqGWADIcFEyvvKVaQHZyv0nDX_I/edit?usp=drive_link">13. Tahsin</a>
-
-            <div class="section-title">
-                C. STUDENT OF THE MONTH
+            <div class="section-title" style="margin-top:30px;">
+                STUDENT OF THE MONTH
             </div>
 
-            <p>
-                Daftar Student of The Month akan ditampilkan di bagian ini.
-            </p>
+            <div id="student-container"></div>
 
         </div>
 
@@ -286,6 +211,117 @@ footer{
 
 </div>
 
+<script>
+
+/* HEADER */
+
+fetch('header.json')
+.then(r => r.json())
+.then(data => {
+
+    document.getElementById('main-title')
+        .textContent = data.judul;
+
+    document.getElementById('sub-title')
+        .innerHTML =
+            data.subjudul + "<br>" + data.tahun;
+
+});
+
+/* INFO */
+
+fetch('info.json')
+.then(r => r.json())
+.then(data => {
+
+    const container =
+        document.getElementById('info-container');
+
+    data.forEach(item => {
+
+        const li =
+            document.createElement('li');
+
+        li.textContent = item;
+
+        container.appendChild(li);
+
+    });
+
+});
+
+/* ESKUL */
+
+fetch('ekskul.json')
+.then(r => r.json())
+.then(data => {
+
+    const container =
+        document.getElementById('ekskul-container');
+
+    data.forEach(item => {
+
+        const link =
+            document.createElement('a');
+
+        link.className = 'menu-link';
+        link.href = item.url;
+        link.target = '_blank';
+        link.textContent = item.nama;
+
+        container.appendChild(link);
+
+    });
+
+});
+
+/* PROGU */
+
+fetch('progu.json')
+.then(r => r.json())
+.then(data => {
+
+    const container =
+        document.getElementById('progu-container');
+
+    data.forEach(item => {
+
+        const link =
+            document.createElement('a');
+
+        link.className = 'menu-link';
+        link.href = item.url;
+        link.target = '_blank';
+        link.textContent = item.nama;
+
+        container.appendChild(link);
+
+    });
+
+});
+
+/* STUDENT OF THE MONTH */
+
+fetch('student.json')
+.then(r => r.json())
+.then(data => {
+
+    const container =
+        document.getElementById('student-container');
+
+    const link =
+        document.createElement('a');
+
+    link.className = 'menu-link';
+    link.href = data.url;
+    link.target = '_blank';
+    link.textContent = data.nama;
+
+    container.appendChild(link);
+
+});
+
+</script>
+
 </body>
 </html>
-```
