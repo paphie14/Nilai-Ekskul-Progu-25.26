@@ -23,7 +23,7 @@ body{
 
 .container{
     width:100%;
-    max-width:900px;
+    max-width:1200px;
     margin:auto;
 }
 
@@ -51,6 +51,44 @@ body{
     margin-bottom:30px;
 }
 
+/* ===== LAYOUT ===== */
+
+.content-wrapper{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+
+.sidebar{
+    width:320px;
+    flex-shrink:0;
+
+    background:#21262d;
+    border:1px solid #30363d;
+    border-radius:10px;
+    padding:18px;
+}
+
+.sidebar h3{
+    margin-top:0;
+    margin-bottom:15px;
+    color:#ffcc00;
+    font-size:24px;
+}
+
+.sidebar ol{
+    padding-left:20px;
+    margin:0;
+}
+
+.sidebar li{
+    margin-bottom:12px;
+}
+
+.main-content{
+    flex:1;
+}
+
 /* ===== SECTION ===== */
 
 .section-title{
@@ -60,6 +98,10 @@ body{
     margin-top:35px;
     margin-bottom:18px;
     font-size:22px;
+}
+
+.section-title:first-child{
+    margin-top:0;
 }
 
 /* ===== LINK ===== */
@@ -98,7 +140,7 @@ footer{
 
 /* ===== MOBILE ===== */
 
-@media (max-width:600px){
+@media (max-width:800px){
 
     body{
         padding:10px;
@@ -106,6 +148,14 @@ footer{
 
     .repo-box{
         padding:15px;
+    }
+
+    .content-wrapper{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
     }
 
     .main-title{
@@ -146,76 +196,104 @@ footer{
         SEMESTER 2 TA 2025/2026
     </div>
 
-    <!-- PROGRAM UNGGULAN -->
+    <div class="content-wrapper">
 
-    <div class="section-title">
-        A. PROGRAM UNGGULAN
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h3>⚠ PENTING!</h3>
+
+            <ol>
+                <li>Isi sesuai dengan Jenis Ekskul dan Program Unggulan.</li>
+
+                <li>Sesuaikan daftar peserta pada absensi dan daftar nilai ini.</li>
+
+                <li>Hapus siswa yang sudah tidak mengikuti.</li>
+
+                <li>Tambahkan siswa yang belum ada dalam daftar nilai.</li>
+
+                <li>Jika tidak bisa mengisi, klik <b>Request Access</b> kemudian WA ke Waka Kesiswaan.</li>
+
+                <li>Selamat mengerjakan.</li>
+            </ol>
+
+        </div>
+
+        <!-- KONTEN UTAMA -->
+
+        <div class="main-content">
+
+            <div class="section-title">
+                A. PROGRAM UNGGULAN
+            </div>
+
+            <a class="menu-link" href="angklung.html">1. Angklung</a>
+
+            <a class="menu-link" href="dokter-kecil.html">2. Dokter Kecil</a>
+
+            <a class="menu-link" href="gamelan.html">3. Gamelan</a>
+
+            <a class="menu-link" href="marawis.html">4. Marawis</a>
+
+            <a class="menu-link" href="marching-band.html">5. Marching Band</a>
+
+            <a class="menu-link" href="roots.html">6. Roots</a>
+
+            <a class="menu-link" href="tahfidz.html">7. Tahfidz Al Qur'an</a>
+
+            <div class="section-title">
+                B. EKSTRAKURIKULER
+            </div>
+
+            <a class="menu-link" href="badminton.html">1. Badminton</a>
+
+            <a class="menu-link"
+               href="https://docs.google.com/spreadsheets/d/1Oy83_Unk6V4Hp3GzVgBy1VbBjTBE7MpNBT4glCMLXGE/edit?usp=drive_link"
+               target="_blank">
+               2. Basket
+            </a>
+
+            <a class="menu-link" href="coding-robotic.html">3. Coding & Robotic</a>
+
+            <a class="menu-link" href="comic-art.html">4. Comic & Art</a>
+
+            <a class="menu-link" href="futsal.html">5. Futsal</a>
+
+            <a class="menu-link" href="karate.html">6. Karate</a>
+
+            <a class="menu-link" href="lia.html">7. LIA</a>
+
+            <a class="menu-link" href="menari.html">8. Menari</a>
+
+            <a class="menu-link" href="menggambar.html">9. Menggambar</a>
+
+            <a class="menu-link" href="renang.html">10. Renang</a>
+
+            <a class="menu-link" href="sains-kids.html">11. Sains Kids</a>
+
+            <a class="menu-link" href="taekwondo.html">12. Taekwondo</a>
+
+            <a class="menu-link" href="tahsin.html">13. Tahsin</a>
+
+            <div class="section-title">
+                C. STUDENT OF THE MONTH
+            </div>
+
+            <p>
+                Daftar Student of The Month akan ditampilkan di bagian ini.
+            </p>
+
+        </div>
+
     </div>
-
-    <a class="menu-link" href="angklung.html">1. Angklung</a>
-
-    <a class="menu-link" href="dokter-kecil.html">2. Dokter Kecil</a>
-
-    <a class="menu-link" href="gamelan.html">3. Gamelan</a>
-
-    <a class="menu-link" href="marawis.html">4. Marawis</a>
-
-    <a class="menu-link" href="marching-band.html">5. Marching Band</a>
-
-    <a class="menu-link" href="roots.html">6. Roots</a>
-
-    <a class="menu-link" href="tahfidz.html">7. Tahfidz Al Qur'an</a>
-
-    <!-- EKSTRAKURIKULER -->
-
-    <div class="section-title">
-        B. EKSTRAKURIKULER
-    </div>
-
-    <a class="menu-link" href="badminton.html">1. Badminton</a>
-
-    <a class="menu-link"
-    href="https://docs.google.com/spreadsheets/d/1Oy83_Unk6V4Hp3GzVgBy1VbBjTBE7MpNBT4glCMLXGE/edit?usp=drive_link">
-    2. Basket
-    </a>
-
-    <a class="menu-link" href="coding-robotic.html">3. Coding & Robotic</a>
-
-    <a class="menu-link" href="comic-art.html">4. Comic & Art</a>
-
-    <a class="menu-link" href="futsal.html">5. Futsal</a>
-
-    <a class="menu-link" href="karate.html">6. Karate</a>
-
-    <a class="menu-link" href="lia.html">7. LIA</a>
-
-    <a class="menu-link" href="menari.html">8. Menari</a>
-
-    <a class="menu-link" href="menggambar.html">9. Menggambar</a>
-
-    <a class="menu-link" href="renang.html">10. Renang</a>
-
-    <a class="menu-link" href="sains-kids.html">11. Sains Kids</a>
-
-    <a class="menu-link" href="taekwondo.html">12. Taekwondo</a>
-
-    <a class="menu-link" href="tahsin.html">13. Tahsin</a>
-
-    <!-- STUDENT OF THE MONTH -->
-
-    <div class="section-title">
-        C. STUDENT OF THE MONTH
-    </div>
-
-    <p>
-        Daftar Student of The Month akan ditampilkan di bagian ini.
-    </p>
 
     <footer>
         © 2025 SD Islam Cikal Harapan II
     </footer>
 
 </div>
+
 </div>
 
 </body>
